@@ -1,0 +1,13 @@
+- crud pos
+- modificacion masiva como SIOP
+   - opciones para seleccionar terminales: textbox, excel, csv con series
+   - pregunta: cambiar estado, ubicacion
+   - resumen y confirmacion de cambio
+   - generacion de remito (guarda en lista de remitos) con cambio de ubic
+- log de ingresos, modificaciones, TODO
+- crud chips
+- carga masiva pos/chips (pasos)
+   - textbox con series (SIOP)
+   - input partnumber, loc, acq, status, connectivity, make
+   - resumen con confirmacion
+- ajustes (agregar/borrar acq, make, loc, status, connectivity)
