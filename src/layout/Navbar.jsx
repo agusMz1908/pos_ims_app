@@ -3,11 +3,14 @@ import logo from "../assets/images/logo.png";
 
 import { BiLogOut, BiSearchAlt } from "react-icons/bi";
 import { FiUser } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <div className="fixed w-full px-16 h-24 bg-oca-green flex justify-between items-center">
-      <img src={logo} alt="logo" className="h-14" />
+      <Link to="/">
+        <img src={logo} alt="logo" className="h-14" />
+      </Link>
       <div className="flex items-center">
         <input
           type="text"
@@ -19,7 +22,10 @@ function Navbar() {
       </div>
       <div className="flex space-x-6 text-white font-bold">
         <button>
-          <FiUser size={40} className="rounded-full p-2 bg-green-200 text-oca-green hover:text-oca-green hover:bg-black" />
+          <FiUser
+            size={40}
+            className="rounded-full p-2 bg-green-200 text-oca-green hover:text-oca-green hover:bg-black"
+          />
         </button>
         <button>
           <BiLogOut size={35} className="hover:text-black" />
