@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BsFillSimFill } from "react-icons/bs";
 
 const ChipsMenu = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -10,7 +11,9 @@ const ChipsMenu = () => {
     return (
         <div className="dropdown">
             <button className="flex mx-8 my-3 text-neutral-500 items-center font-bold text-2xl first:mt-10 hover:text-oca-green" onClick={toggleMenu}>
-                Chips
+                <div className="flex flex-row items-center space-x-3"><BsFillSimFill />
+                    <span>Settings</span>
+                </div>
             </button>
             {showMenu && (
                 <div className="flex flex-col">

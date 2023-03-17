@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FiSettings } from "react-icons/fi";
 
 const SettingsMenu = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -10,7 +11,9 @@ const SettingsMenu = () => {
     return (
         <div>
             <button className="flex mx-8 my-3 text-neutral-500 items-center font-bold text-2xl first:mt-10 hover:text-oca-green" onClick={toggleMenu}>
-                Settings
+                <div className="flex flex-row items-center space-x-3"><FiSettings />
+                    <span>Settings</span>
+                </div>
             </button>
             {showMenu && (
                 <div className="flex flex-col">
