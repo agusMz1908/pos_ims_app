@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/images/logo.png";
 
 import { BiLogOut, BiSearchAlt } from "react-icons/bi";
+import { FiUser } from "react-icons/fi";
 
 function Navbar() {
   return (
@@ -16,8 +17,13 @@ function Navbar() {
           <BiSearchAlt className="text-neutral-700" />
         </button>
       </div>
-      <div className="flex space-x-4 text-white font-bold">
-        <BiLogOut size={30} />
+      <div className="flex space-x-6 text-white font-bold">
+        <button>
+          <FiUser size={40} className="rounded-full p-2 bg-green-200 text-oca-green hover:text-oca-green hover:bg-black" />
+        </button>
+        <button>
+          <BiLogOut size={35} className="hover:text-black" />
+        </button>
       </div>
     </div>
   );
