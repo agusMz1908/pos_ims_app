@@ -1,5 +1,5 @@
 import React from "react";
-import { BsCalculatorFill, BsFillSimFill } from "react-icons/bs";
+import { BsCalculatorFill, BsFillSimFill, BsFillCaretRightFill, BsFillCaretDownFill } from "react-icons/bs";
 
 import MenuItem from "../components/MenuItem";
 import { FiSettings } from "react-icons/fi";
@@ -9,6 +9,8 @@ function Sidebar() {
     {
       title: "Terminales",
       icon: <BsCalculatorFill />,
+      arrowClose: <BsFillCaretRightFill />,
+      arrowOpen: <BsFillCaretDownFill />,
       options: [
         {
           title: "Listado",
@@ -23,6 +25,8 @@ function Sidebar() {
     {
       title: "Chips",
       icon: <BsFillSimFill />,
+      arrowClose: <BsFillCaretRightFill />,
+      arrowOpen: <BsFillCaretDownFill />,
       options: [
         {
           title: "Listado",
@@ -40,6 +44,8 @@ function Sidebar() {
     {
       title: "Settings",
       icon: <FiSettings />,
+      arrowClose: <BsFillCaretRightFill />,
+      arrowOpen: <BsFillCaretDownFill />,
       options: [
         {
           title: "Acquirentes",
@@ -76,12 +82,12 @@ function Sidebar() {
     >
       <div>
         {menuItems.map((item) => {
-          return <MenuItem item={item} key={item.title} />;
+          return <MenuItem item={item} arrowClose={item.arrowClose} arrowOpen={item.arrowOpen} key={item.title} />;
         })}
       </div>
       <div>
         {secMenuItems.map((item) => {
-          return <MenuItem item={item} key={item.title} />;
+          return <MenuItem item={item} arrowClose={item.arrowClose} arrowOpen={item.arrowOpen} key={item.title} />;
         })}
       </div>
     </div>

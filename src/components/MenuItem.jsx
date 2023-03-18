@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function item({ item }) {
+function item({ item, arrowClose }) {
+
   const [showMenu, setShowMenu] = useState(false);
+
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -16,6 +18,7 @@ function item({ item }) {
         <div className="flex flex-row items-center space-x-3">
           {item.icon}
           <span>{item.title}</span>
+          {showMenu ? item.arrowOpen : item.arrowClose}
         </div>
       </button>
       {showMenu && (
